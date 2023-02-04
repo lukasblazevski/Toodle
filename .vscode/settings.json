@@ -5,5 +5,8 @@
 	"javascript.preferences.quoteStyle": "single",
 	"files.exclude": {
 		".next": true
-	}
+	},
+	"cSpell.words": [
+		"signup"
+	]
 }

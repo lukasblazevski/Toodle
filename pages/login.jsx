@@ -4,20 +4,17 @@ import api from '../lib/api';
 
 const Component = () => (
 	<>
-		<h1>Sign Up</h1>
-		<br />
+
+	<div class="login-container">
+		<h2>Log in to Toodle</h2>
 
 		<Formik
 			initialValues={{
 				username: '',
 				password: '',
-				confirmPassword: ''
 			}}
-			onSubmit={async ({ username, password, confirmPassword }) => {
-				if (password !== confirmPassword) {
-					alert('Error: Passwords do not match');
-					return;
-				}
+			onSubmit={async ({ username, password}) => {
+				
 
 				await api.post('/users', { username, password });
 
@@ -33,17 +30,14 @@ const Component = () => (
 				<Field type="password" name="password" id="password" required />
 				<br />
 				<br />
-				<label htmlFor="confirm-password">Confirm: </label>
-				<Field type="password" name="confirmPassword" id="confirm-password" required />
-				<br />
-				<br />
-				<br />
+				
 
 				<div>
-					<button type="submit">Sign Up</button> <Link href="/">Back to Login</Link>
+					<button type="submit" class="login-button">Log In</button> 
 				</div>
 			</Form>
 		</Formik>
+		</div>
 	</>
 );
 
