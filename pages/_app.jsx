@@ -14,7 +14,7 @@ export default function App({ Component, pageProps }) {
 
 
 			<ul class="navbar">
-			<a href="https://google.com"><img id="OU-logo" src="OU_Dark.svg"/></a>
+			<a><img id="navbar-toodle-logo" src="favicon.ico"/> </a>
 			<li class="navbar-li">
 				<div class="dropdown">
 					<button class="dropbtn" id="first-drop-btn">Current Courses <span>&#62;</span> </button>
@@ -47,6 +47,8 @@ export default function App({ Component, pageProps }) {
 					</div>
 				</div>
 				</div> 
+				<a href="https://google.com"><img id="OU-logo" src="OU_Dark.svg"/></a>
+
 			</li>
 
 			
