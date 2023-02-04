@@ -22,18 +22,16 @@ const Component = () => (
 			}}
 		>
 			<Form>
-				<label htmlFor="username">Username: </label>
-				<Field type="text" name="username" id="username" required autoFocus autoComplete="off" />
+				<Field type="text" name="username" id="username" class="up-format" placeholder="Username or Email" required autoFocus autoComplete="off" />
 				<br />
 				<br />
-				<label htmlFor="password">Password: </label>
-				<Field type="password" name="password" id="password" required />
+				<Field type="password" name="password" id="password" class="up-format" placeholder="Password" required />
 				<br />
 				<br />
 				
 
 				<div>
-					<button type="submit" class="login-button">Log In</button> 
+					<button type="submit" id="login-button">Log In</button> 
 				</div>
 			</Form>
 		</Formik>

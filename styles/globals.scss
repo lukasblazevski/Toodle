@@ -1,6 +1,16 @@
+$blue1: #205C7C;
+$rorange: #FE4A49;
+$yellow: #FED766;
+$sienna: #2C0703;
+$b-color: #9AC6C5;
+$shadow: rgba(0,0,0,0.2);
+
 :root {
 	zoom: 2;
-	background-color: burlywood;
+	background-color: $b-color   ;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
 }
 
 .login-container{
@@ -13,14 +23,26 @@
 	margin-left: 40%;
 	margin-top: 10%;
 	border-radius: 5%;
-	font-size:x-large;
-	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	font-size:large;
+	box-shadow: 0px 8px 16px 0px $shadow;
 
 }
 
-.login-button {
+.up-format {
+	height: 40px;
+	width: 250px;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: none;
+	border-style: solid;
+}
+
+#login-button {
 	width: 100px;
 	height: 50px;
 	font-size: large;
-
+	background-color: $blue1;
+	color: white;
+	border-radius: 10px;
+	border: none;
 }
