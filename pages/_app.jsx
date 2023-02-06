@@ -13,35 +13,35 @@ export default function App({ Component, pageProps }) {
 			</Head>
 
 
-			<ul class="navbar">
+			<ul className="navbar">
 			<a><img id="navbar-toodle-logo" src="favicon.ico"/> </a>
-			<li class="navbar-li">
-				<div class="dropdown">
-					<button class="dropbtn" id="first-drop-btn">Current Courses <span>&#62;</span> </button>
-					<div class="dropdown-content">
+			<li className="navbar-li">
+				<div className="dropdown">
+					<button className="dropbtn" id="first-drop-btn">Current Courses <span>&#62;</span> </button>
+					<div className="dropdown-content">
 					<a href="#">CSI-4999-Capstone</a>
 					<a href="#">CSI-4160-Integrated Computing Systems</a>
 					<a href="#">CSI-4480-Information Security</a>
 					</div>
 				</div> 
 			</li>
-			<li class="navbar-li">
-				<div class="dropdown">
-					<button class="dropbtn" onclick="window.location.href='https://mysail.oakland.edu';">MySail</button>
+			<li className="navbar-li">
+				<div className="dropdown">
+					<button className="dropbtn" onclick="window.location.href='https://mysail.oakland.edu';">MySail</button>
 					
 				</div> 
 			</li>
-			<li class="navbar-li">
-				<div class="dropdown">
-					<button class="dropbtn" onclick="window.location.href='https://www2.oakland.edu/secure/esp/';">Get Help</button>
+			<li className="navbar-li">
+				<div className="dropdown">
+					<button className="dropbtn" onclick="window.location.href='https://www2.oakland.edu/secure/esp/';">Get Help</button>
 				</div> 
 			</li>
 
-			<li class="navbar-li-right">
-				<div class="dropdown">
-					<a><img class="dropdown" id="nav-profile-photo" src="default_user_profile.svg"/> </a>
-					<div class="dropdown-content">
-					<div class="dropdown-content-right">
+			<li className="navbar-li-right">
+				<div className="dropdown">
+					<a><img className="dropdown" id="nav-profile-photo" src="default_user_profile.svg"/> </a>
+					<div className="dropdown-content">
+					<div className="dropdown-content-right">
 					<a>Preferences</a>
 					<a>Logout</a>
 					</div>
