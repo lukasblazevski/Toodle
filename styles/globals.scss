@@ -6,11 +6,8 @@ $b-color: #9AC6C5;
 $shadow: rgba(0,0,0,0.2);
 
 :root {
-	zoom: 2;
-	background-color: $b-color   ;
+	background-color: $b-color;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
 }
 
 .login-container{
@@ -25,7 +22,6 @@ $shadow: rgba(0,0,0,0.2);
 	border-radius: 5%;
 	font-size:large;
 	box-shadow: 0px 8px 16px 0px $shadow;
-
 }
 
 .up-format {
