@@ -1,7 +1,6 @@
-import Nav from 'components/Nav';
+import CustomNav from 'components/CustomNav';
 import Head from 'next/head';
 import '../styles/globals.scss';
-import '../styles/navbar.scss';
 
 export default function App({ Component, pageProps }) {
 	return (
@@ -12,7 +11,7 @@ export default function App({ Component, pageProps }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Nav />
+			<CustomNav/>
 
 			<Component {...pageProps} />
 		</>

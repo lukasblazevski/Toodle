@@ -10,10 +10,49 @@ $shadow: rgba(0,0,0,0.2);
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+#nav-container {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#profile-photo {
+	width: 40px;
+	height: 40px;
+}
+#profile-photo-nav {
+	width: 80px;
+}
+
+#OU-logo {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	margin-right: 40px;
+}
+
+#OU-logo-div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-items: stretch;
+}
+
+#navbar-right-adjust{
+	display: flex;
+	flex-wrap: nowrap;
+	margin-left: auto;
+}
+#navbar-toodle-logo{
+	width: 40px;
+	height: 40px;
+}
+
 .login-container {
 	display: flex;
 	justify-content: center;
+	background-color: $b-color;
 }
+
 
 .login-box {
 	background-color: white;
