@@ -3,11 +3,15 @@ $rorange: #FE4A49;
 $yellow: #FED766;
 $sienna: #2C0703;
 $b-color: #9AC6C5;
+$grey: #7c7c7c;
 $shadow: rgba(0,0,0,0.2);
 
 :root {
 	background-color: $b-color;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+	background: none;
 }
 
 #nav-container {
@@ -66,6 +70,20 @@ $shadow: rgba(0,0,0,0.2);
 	box-shadow: 0px 8px 16px 0px $shadow;
 }
 
+
+.login-forum {
+	padding: 10px;
+}
+
+#forgot-pass-div {
+	font-size: 12px;
+	margin-top: 15px;
+}
+
+#forgot-pass-link {
+	text-decoration: none;
+	color: $grey
+}
 .up-format {
 	height: 40px;
 	width: 250px;
@@ -83,4 +101,10 @@ $shadow: rgba(0,0,0,0.2);
 	color: white;
 	border-radius: 10px;
 	border: none;
+	margin-top: 15px;
+}
+
+.cu {
+	color: purple;
+	background-color: $b-color;
 }

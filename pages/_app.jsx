@@ -1,6 +1,10 @@
 import CustomNav from 'components/CustomNav';
+import CustomNavLogin from 'components/CustomNavLogin';
+
 import Head from 'next/head';
 import '../styles/globals.scss';
+import '../styles/class.scss';
+
 
 export default function App({ Component, pageProps }) {
 	return (
