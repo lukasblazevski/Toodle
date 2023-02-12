@@ -4,7 +4,9 @@ const argon2 = require('argon2');
 const users = db.collection('users');
 
 async function run() {
-	await users.drop();
+	try {
+		await users.drop();
+	} catch {}
 
 	await users.insertOne({
 		type: 'professor',
