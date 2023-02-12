@@ -2,8 +2,8 @@ import CustomNav from 'components/CustomNav';
 import CustomNavLogin from 'components/CustomNavLogin';
 
 import { Field, Form, Formik } from 'formik';
+import api from 'lib/api';
 import Link from 'next/link';
-import api from '../lib/api';
 
 
 export default function Component() {
@@ -16,27 +16,25 @@ export default function Component() {
 
 				<Formik
 					initialValues={{
-						username: '',
+						email: '',
 						password: '',
 					}}
-					onSubmit={async ({ username, password}) => {
-						await api.post('/users', { username, password });
+					onSubmit={async ({ email, password }) => {
+						await api.post('/session', {
+							email,
+							password
+						});
 
-						location.href = '/user';
+						alert('logged in!');
 					}}
 				>
-					<Form class="login-forum">
-						<Field type="text" name="username" id="username" className="up-format" placeholder="Username or Email" required autoFocus />
+					<Form className="login-forum">
+						<Field type="email" name="email" id="email" className="up-format" placeholder="Email" required autoFocus />
 						<br />
 						<br />
 						<Field type="password" name="password" id="password" className="up-format" placeholder="Password" required />
 						<br />
-						<div id="forgot-pass-div">
-							<a id="forgot-pass-link" href="#" >
-								Forgot Your Password?
-							</a>
-						</div>
-						
+
 
 						<div>
 							<button type="submit" id="login-button">Log In</button>
