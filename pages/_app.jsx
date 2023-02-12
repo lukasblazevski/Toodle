@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<CustomNav/>
+			
 
 			<Component {...pageProps} />
 		</>

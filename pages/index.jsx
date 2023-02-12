@@ -1,3 +1,6 @@
+import CustomNav from 'components/CustomNav';
+import CustomNavLogin from 'components/CustomNavLogin';
+
 import { Field, Form, Formik } from 'formik';
 import Link from 'next/link';
 import api from '../lib/api';
@@ -5,7 +8,8 @@ import api from '../lib/api';
 
 export default function Component() {
 	return (
-		
+		<>
+		<CustomNavLogin/>
 		<div className="login-container">
 			<div className="login-box">
 				<h3>Log in to Toodle</h3>
@@ -41,5 +45,6 @@ export default function Component() {
 				</Formik>
 			</div>
 		</div>
+		</>
 	);
 }
