@@ -1,0 +1,95 @@
+<style>
+  /* Set font and background color */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #E0E0E0;
+  }
+
+  /* Style the navigation bar */
+  header nav {
+    background-color: #00BFFF;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 30px;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+
+  header nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+  }
+
+  /* Style the classes section */
+  main {
+    padding: 20px;
+  }
+
+  main h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  main ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  main li {
+    background-color: #00BFFF;
+    color: #FFFFFF;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+  }
+
+  /* Style the upcoming assignments section */
+  footer {
+    background-color: #00BFFF;
+    color: #FFFFFF;
+    padding: 20px;
+    text-align: center;
+    border-radius: 30px;
+  }
+
+  footer h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer li {
+    width: 50%;
+    text-align: left;
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  footer li span {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+  }
+</style>
