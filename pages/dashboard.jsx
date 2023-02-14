@@ -1,25 +1,11 @@
+import CustomNav from 'components/CustomNav';
+
 export default function Component() {
 	return (
 		<>
+		<CustomNav/>
 		<div>
-		  &lt;&gt;
-		  <title>Toodle</title>
-		  <header>
-			<nav>
-			  <h1>Toodle</h1>
-			  <ul>
-				<li>
-				  <a href="#">Home</a>
-				</li>
-				<li>
-				  <a href="#">Courses</a>
-				</li>
-				<li>
-				  <a href="#">Assignments</a>
-				</li>
-			  </ul>
-			</nav>
-		  </header>
+		  
 		  <main>
 			<h2>Courses</h2>
 			<ul>
