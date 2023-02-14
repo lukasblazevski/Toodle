@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import '../styles/globals.scss';
 import '../styles/class.scss';
-import '../styles/dashboard.scss';
 
 
 export default function App({ Component, pageProps }) {

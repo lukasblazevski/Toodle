@@ -4,46 +4,48 @@ export default function Component() {
 	return (
 		<>
 		<CustomNav/>
-		<div>
+		<div id='dash-main-div'>
 		  
-		  <main>
-			<h2>Courses</h2>
-			<ul>
-			  <li>
-				<h3>CSI 3620</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+		  <main id='dash-main'>
+			<h2 id='dash-course-name'>Courses</h2>
+			<ul className='dash-class-list'>
+			  <div className='dash-class-container'>
+				<div className='dash-class-title'>
+					<h3>CSI 3620</h3>
+				</div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing edivt.</p>
 				<a href="#">Join Zoom Meeting</a>
-			  </li>
-			  <li>
+			  </div>
+			  <div className='dash-class-container'>
 				<h3>CSI 3370</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing edivt.</p>
 				<a href="#">Join Zoom Meeting</a>
-			  </li>
-			  <li>
+			  </div>
+			  <div className='dash-class-container'>
 				<h3>CSI 4999</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing edivt.</p>
 				<a href="#">Join Zoom Meeting</a>
-			  </li>
+			  </div>
 			</ul>
 		  </main>
-		  <footer>
-			<h2>Upcoming Assignments</h2>
-			<ul>
-			  <li>
+		  <footer id='dash-footer'>
+			<h2 id='dash-upcoming-assignments-name'>Upcoming Assignments</h2>
+			<ul className='dash-upcoming-assignments-list'>
+			  <div className='class-container-time'>
 				CSI 3370 Report 2
 				<br />
 				Due In: 2 days
-			  </li>
-			  <li>
+			  </div>
+			  <div className='class-container-time'>
 				CSI 3370 HW 2
 				<br />
 				Due In: 3 days
-			  </li>
-			  <li>
+			  </div>
+			  <div className='class-container-time'>
 				CSI 4999 Report 3
 				<br />
 				Due In: 7 days
-			  </li>
+			  </div>
 			</ul>
 		  </footer>
 		</div>
