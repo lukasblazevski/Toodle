@@ -33,17 +33,17 @@ export default function Component() {
 			<ul className='dash-upcoming-assignments-list'>
 			  <div className='class-container-time'>
 				CSI 3370 Report 2
-				<br />
+				&nbsp;
 				Due In: 2 days
 			  </div>
 			  <div className='class-container-time'>
 				CSI 3370 HW 2
-				<br />
+				&nbsp;
 				Due In: 3 days
 			  </div>
 			  <div className='class-container-time'>
 				CSI 4999 Report 3
-				<br />
+				&nbsp;
 				Due In: 7 days
 			  </div>
 			</ul>
