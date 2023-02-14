@@ -1,6 +1,6 @@
-var NewComponent = React.createClass({
-	render: function() {
-	  return (
+export default function Component() {
+	return (
+		<>
 		<div>
 		  &lt;&gt;
 		  <title>Toodle</title>
@@ -61,6 +61,6 @@ var NewComponent = React.createClass({
 			</ul>
 		  </footer>
 		</div>
-	  );
+		</>
+		);
 	}
-  });
