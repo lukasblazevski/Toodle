@@ -5,7 +5,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "create-users": "node ./scripts/create-users.js"
+    "generate-data": "node ./scripts/generate-data.js"
   },
   "dependencies": {
     "argon2": "^0.30.3",

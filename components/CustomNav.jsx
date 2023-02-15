@@ -1,4 +1,3 @@
-
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -18,9 +17,9 @@ export default function CustomNav() {
 				<Navbar.Collapse id="basic-navbar-nav">
 				  <Nav className="me-auto">
 					<NavDropdown title="Current Classes" id="basic-nav-dropdown">
-					  <NavDropdown.Item>Class 1</NavDropdown.Item>
-					  <NavDropdown.Item>Class 2</NavDropdown.Item>
-					  <NavDropdown.Item>Class 3</NavDropdown.Item>
+					  <NavDropdown.Item>CSI 3500</NavDropdown.Item>
+					  <NavDropdown.Item>CSI 3370</NavDropdown.Item>
+					  <NavDropdown.Item>CSI 4999</NavDropdown.Item>
 					</NavDropdown>
 					<Nav.Link href="#nysail">MySail</Nav.Link>
 					<Nav.Link href="#helpdesk">Get Help</Nav.Link>
