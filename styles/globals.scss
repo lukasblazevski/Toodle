@@ -98,7 +98,6 @@ body {
 }
 
 //class page css start
-
 #class-top-div {
 	background-color: $b-color;
 }
@@ -171,9 +170,7 @@ body {
 	border-radius: $border-radius-num;
 }
 
-#class-center-container {
-	display: flex;
-}
+
 
 #class-nav-right-container {
 	background-color: white;
@@ -184,6 +181,48 @@ body {
 	margin-left: 1%;
 	margin-right: 1%;
 }
+
+//start class components css (middle of page container)
+#class-center-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#class-home-main-div {
+	display: flex;
+	margin-top: 3%;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#class-home-title {
+
+	display: flex;
+	justify-content: center;
+
+}
+
+#class-home-welcome {
+	padding-left: 5em;
+	padding-right: 5em;
+	padding-top: 1em;
+}
+
+#class-home-importantlinks {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1em;
+
+}
+
+.class-home-importantlinks-links {
+	display: flex;
+	background-color: purple;
+}
+
+
 
 //dashboard css start
 #dash-main {
@@ -275,4 +314,7 @@ body {
 	display: flex;
 	flex-direction: column;
 }
+
+
+
 
