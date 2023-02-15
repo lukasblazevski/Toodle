@@ -4,6 +4,7 @@ import CustomNavLogin from 'components/CustomNavLogin';
 import { Field, Form, Formik } from 'formik';
 import api from 'lib/api';
 import Link from 'next/link';
+import Router from 'next/router';
 
 
 export default function Component() {
@@ -25,7 +26,7 @@ export default function Component() {
 							password
 						});
 
-						alert('logged in!');
+						Router.replace('/dashboard');
 					}}
 				>
 					<Form className="login-forum">
