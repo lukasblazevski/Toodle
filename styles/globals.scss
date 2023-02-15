@@ -97,14 +97,22 @@ body {
 	margin-top: 15px;
 }
 
+//class page css start
+
+#class-top-div {
+	background-color: $b-color;
+}
 #class-page-contents {
 	display: flex;
+}
+
+#class-title-top-div {
+	padding-top: 1%;
 }
 
 #class-title-div {
 	display: flex;
 	background-color: white;
-	margin-top: 1%;
 	padding: 1%;
 	text-align: center;
 	margin-left: 1%;
