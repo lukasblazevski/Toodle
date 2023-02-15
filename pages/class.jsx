@@ -6,6 +6,7 @@ import {Container, Nav} from "react-bootstrap";
 import { withRouter } from "react-router";
 import CustomNav from 'components/CustomNav';
 import CustomNavLogin from 'components/CustomNavLogin';
+import Classhomepage from 'components/Classhomepage';
 
 
 export default function Component() {
@@ -59,7 +60,7 @@ export default function Component() {
 
 				<div id="class-center-box">
 					<div id='class-center-container'>
-						<body> test</body>
+						<Classhomepage/>
 					</div>
 				</div>
 
