@@ -101,7 +101,7 @@ async function generateCourses() {
 			{ email: 'adonaghy@oakland.edu' },
 			{ email: 'lblazevski@oakland.edu' }
 		]
-	})
+	});
 }
 
 async function run() {
