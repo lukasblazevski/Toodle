@@ -1,49 +1,52 @@
-import CustomNav from 'components/CustomNav';
-import CustomNavLogin from 'components/CustomNavLogin';
-
-import { Field, Form, Formik } from 'formik';
-import api from 'lib/api';
-import Link from 'next/link';
-import Router from 'next/router';
-
+import { Fragment, useContext } from 'react';
+import DataContext from 'lib/DataContext';
+import { Button } from 'react-bootstrap';
+import UpcomingAssignment from 'components/UpcomingAssignment';
 
 export default function Component() {
+	const { user, courses } = useContext(DataContext);
+
 	return (
-		<>
-		<CustomNavLogin/>
-		<div className="login-container">
-			<div className="login-box">
-				<h3>Log in to Toodle</h3>
-
-				<Formik
-					initialValues={{
-						email: '',
-						password: '',
-					}}
-					onSubmit={async ({ email, password }) => {
-						await api.post('/session', {
-							email,
-							password
-						});
-
-						Router.replace('/dashboard');
-					}}
-				>
-					<Form className="login-forum">
-						<Field type="email" name="email" id="email" className="up-format" placeholder="Email" required autoFocus />
-						<br />
-						<br />
-						<Field type="password" name="password" id="password" className="up-format" placeholder="Password" required />
-						<br />
-
-
-						<div>
-							<button type="submit" id="login-button">Log In</button>
+		<div id='dash-main-div'>
+			<main id='dash-main'>
+				<h2 id='dash-course-name'>Courses</h2>
+				<div className='dash-class-list'>
+					{courses.map(course => (
+						<div key={course.id} className='dash-class-container'>
+							<div className='dash-class-title'>
+								<h3>{course.id} - {course.name}</h3>
+							</div>
+							<Button href={`/course/${course.id}`}>
+								Open Course
+							</Button>
+							{' '}
+							<a href="https://zoom.us/join" target="_blank">Join Zoom Meeting</a>
 						</div>
-					</Form>
-				</Formik>
-			</div>
+					))}
+				</div>
+			</main>
+			<footer id='dash-footer'>
+				<h2 id='dash-upcoming-assignments-name'>Upcoming Assignments</h2>
+				<div className='dash-upcoming-assignments-list'>
+					{courses.map(course => (
+						<Fragment key={course.id}>
+							{course.items.map((item, i) => ({
+								...item,
+								id: i
+							})).filter(item => (
+								item.type === 'assignment'
+								&& !item.submissions.some(submission => (
+									submission.student === user.email
+								))
+							)).sort((a, b) => (
+								+new Date(a.dueDate) - new Date(b.dueDate)
+							)).map(item => (
+								<UpcomingAssignment key={item.id} course={course} itemID={item.id} />
+							))}
+						</Fragment>
+					))}
+				</div>
+			</footer>
 		</div>
-		</>
 	);
 }

@@ -1,8 +1,15 @@
 import db from 'lib/db';
 import argon2 from 'argon2';
-import { setUserToCookies } from 'lib/cookies';
+import { deleteUserFromCookies, setUserToCookies } from 'lib/cookies';
 
 export default async function handler(req, res) {
+	if (req.method === 'DELETE') {
+		await deleteUserFromCookies(req, res);
+
+		res.end();
+		return;
+	}
+
 	if (req.method !== 'POST') {
 		res.status(405);
 		return;
@@ -24,7 +31,7 @@ export default async function handler(req, res) {
 		return;
 	}
 
-	await setUserToCookies(req, res, user._id);
+	await setUserToCookies(req, res, user);
 
 	res.end();
 }

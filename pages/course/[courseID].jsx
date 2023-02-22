@@ -1,22 +1,13 @@
-import { Field, Form, Formik } from 'formik';
-import Link from 'next/link';
-import api from '../lib/api';
 import React from "react";
-import {Container, Nav} from "react-bootstrap";
-import { withRouter } from "react-router";
-import CustomNav from 'components/CustomNav';
-import CustomNavLogin from 'components/CustomNavLogin';
 import Classhomepage from 'components/Classhomepage';
-
 
 export default function Component() {
 	return (
 		<>
-		<CustomNav/>
 		<div id='class-top-div'>
 			<div id='class-title-top-div'>
 				<div id='class-title-div'>
-					<h3 id='class-title-name'>CSI-4999 - Senior Capstone</h3>
+					<h3 id='class-title-name'>CSI-3500 - Human Computer Interaction</h3>
 					<h5 id='class-location-link'>Class Location</h5>
 				</div>
 			</div>
@@ -75,7 +66,7 @@ export default function Component() {
 					</div>
 				</div>
 
-				
+
 			</div>
 		</div>
 		</>

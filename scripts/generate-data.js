@@ -67,10 +67,11 @@ async function generateCourses() {
 	} catch {}
 
 	await courses.insertOne({
-		id: 'CSI 3500',
+		id: 'CSI-3500',
 		name: 'Human Computer Interaction',
 		professor: 'grantgryczan@oakland.edu',
 		location: 'Online',
+		description: 'This course surveys various components and techniques of Human Computer Interactions (HCI). Topics include the basic perceptual, cognitive, performance capabilities of people and external factors that affect these capabilities. Various tools and techniques for understanding and evaluating the interactions of people with technology are discussed. Systematic process for designing, prototyping, evaluating and revising interactive systems are studied.',
 		items: [
 			{
 				type: 'embed',
@@ -80,25 +81,34 @@ async function generateCourses() {
 			},
 			{
 				type: 'assignment',
-				date: new Date('January 14, 2023'),
-				dueDate: new Date('January 21, 2023'),
+				date: new Date('January 15, 2023'),
+				dueDate: new Date('January 31, 2023'),
 				name: 'Individual assignment: Persona Readings',
 				points: 10,
 				description: 'Like any reading assignment, submit three copy/pasted sentences per reading in the numbered list below.\n\n1. About Face, 4th edition - chapter 3 (teaches you what a persona is, why they are important to a user-centered design process, and how to make one)',
 				attachments: [],
 				submissions: [
 					{
-						date: new Date('January 20, 2023 3:24 PM'),
+						date: new Date('January 22, 2023 3:24 PM'),
 						student: 'jordancostlow@oakland.edu',
 						attachment: 'Individual Assignment 2.pdf',
 						points: 8
 					}
 				]
+			},
+			{
+				type: 'assignment',
+				date: new Date('February 21, 2023'),
+				dueDate: new Date('April 13, 2023'),
+				name: 'Group assignment: Key Path Scenario',
+				points: 100,
+				description: 'Select one of the three persona+problem scenario pairs that you claimed last week. You will design a key path scenario for this persona and their problem.',
+				attachments: [],
+				submissions: []
 			}
 		],
 		students: [
 			{ email: 'jordancostlow@oakland.edu' },
-			{ email: 'adonaghy@oakland.edu' },
 			{ email: 'lblazevski@oakland.edu' }
 		]
 	});
