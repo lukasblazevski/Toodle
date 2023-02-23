@@ -55,3 +55,61 @@ $border-radius-num: 10px;
 	margin-left: 20px;
 	padding: 5px;
 }
+
+//start class assignments css
+.class-assign-main-div{
+	display: flex;
+	border: solid;
+}
+
+.class-assign-header{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.class-assign-container {
+	width: 1250px;
+	display: flex;
+	flex-direction: row;
+	//justify-content: center;
+	align-items: center;
+	//padding: 10px;
+	border-bottom: solid .5px $blue1;
+	box-shadow: 0px 0px 5px 0px $shadow;
+	padding: 10px;
+}
+
+.class-assign-container-name{
+	margin: 10px;
+}
+
+.class-assign-container-name-link {
+	text-decoration: none;
+	color: $blue1
+}
+
+.class-assign-container-description{
+	padding-right: 400px;
+}
+
+.class-assign-container-due-static {
+	color: $blue1;
+	padding: 10px;
+}
+
+.class-assign-container-due-stack {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.class-assign-container-due {
+
+}
+
+.class-assign-container-remaining{
+
+}
