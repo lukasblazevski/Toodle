@@ -107,9 +107,63 @@ $border-radius-num: 10px;
 }
 
 .class-assign-container-due {
-
 }
 
 .class-assign-container-remaining{
+}
 
+
+//start class people css
+
+.class-people-main-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#class-people-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+.class-people-container {
+	display: flex;
+	flex-direction: row;
+	border: solid;
+	width: 1000px;
+}
+
+.class-people-container-namerole-div{
+	display: flex;
+	flex-direction: column;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+.class-people-container-name {
+	display: flex;
+}
+
+.class-people-container-email{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 25px;
+	color: $blue1;
+	text-decoration: none;
+}
+
+.class-people-container-email a {
+	text-decoration: none;
+}
+
+.class-people-container-role {
+	display: flex;
+}
+
+.class-people-container-lastactive {
+	display: flex;
 }

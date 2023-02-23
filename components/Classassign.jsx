@@ -20,6 +20,7 @@ export default function Classassign() {
 					<h8></h8>
 				</div>
 
+				{/*text change to submitted when submitted*/}
 				<div className='class-assign-container-due-stack'>
 					<div className='class-assign-container-due'>
 						<h8>Feburary 8th at 11:59pm</h8>
@@ -28,10 +29,6 @@ export default function Classassign() {
 						<h8>12 hours remaining</h8>
 					</div>
 				</div>
-				
-
-
-
 			</div>
 
 
