@@ -1,4 +1,4 @@
-export default function CustomNav() {
+export default function Classhomepage() {
 	return (
 		<>
 			<div id='class-home-main-div'>

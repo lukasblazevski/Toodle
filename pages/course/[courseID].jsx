@@ -1,5 +1,6 @@
 import React from "react";
 import Classhomepage from 'components/Classhomepage';
+import Classannouncements from 'components/Classannouncements'
 
 export default function Component() {
 	return (
@@ -51,7 +52,7 @@ export default function Component() {
 
 				<div id="class-center-box">
 					<div id='class-center-container'>
-						<Classhomepage/>
+						<Classannouncements/>
 					</div>
 				</div>
 

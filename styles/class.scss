@@ -4,8 +4,54 @@ $yellow: #FED766;
 $sienna: #2C0703;
 $b-color: #9AC6C5;
 $shadow: rgba(0,0,0,0.2);
+$border-radius-num: 10px;
 
-.cu {
-	color: purple;
-	background-color: $b-color;
+//start class announcements css
+#class-ann-main-div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.class-ann-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.class-ann-container {
+	display: flex;
+	border-bottom: solid .5px $blue1;
+	box-shadow: 0px 0px 5px 0px $shadow;
+	padding: 10px;
+}
+
+.class-ann-title-auth-box {
+	border-right: solid 1px;
+}
+
+.class-ann-title-prev-box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.class-ann-box-title {
+	display: flex;
+	margin-right: 10px;
+	width: 225px;
+	justify-content: baseline;
+	align-items: center;
+}
+
+.class-ann-box-author {
+	display: flex;
+	color: $blue1
+}
+
+.class-ann-box-prev {
+	margin-left: 20px;
+	padding: 5px;
 }
