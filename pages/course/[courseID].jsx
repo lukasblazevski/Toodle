@@ -1,7 +1,7 @@
 import React from "react";
 import Classhomepage from 'components/Classhomepage';
 import Classannouncements from 'components/Classannouncements'
-import Classsyllabus from 'components/Classsyllabus';
+import Assignments from 'components/Assignments';
 
 export default function Component() {
 	return (
@@ -53,7 +53,7 @@ export default function Component() {
 
 				<div id="class-center-box">
 					<div id='class-center-container'>
-						<Classsyllabus/>
+						<Assignments/>
 					</div>
 				</div>
 

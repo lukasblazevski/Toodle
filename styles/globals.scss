@@ -4,6 +4,7 @@ $yellow: #FED766;
 $sienna: #2C0703;
 $b-color: #9AC6C5;
 $grey: #7c7c7c;
+$light-grey: #e4e4e4;
 $shadow: rgba(0,0,0,0.2);
 
 $border-radius-num: 10px;
@@ -295,5 +296,114 @@ body {
 }
 
 
+//start assignment component scss
+
+#asign-main-div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.assign-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+}
+
+.assign-time-remain {
+	margin-top: 5px;
+	color: $blue1
+
+}
+
+.assign-table-div {
+	//padding: 5px;
+	//border: 1px solid;
+}
+
+.assign-due-dates tr td{
+}
 
 
+.assign-due-table-c1 {
+	display: flex;
+	justify-content: center;
+	padding-right: 10px;
+	font-weight: bold;
+}
+
+.assign-assign-body-div {
+	background-color: $light-grey ;
+	width: 85%;
+	margin: 15px;
+	//border: .01px solid;
+	border-radius: 5px;
+	//box-shadow: 0px 0px 16px 0px $shadow;
+}
+
+.assign-assign-body {
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	
+
+}
+.assign-assign-attachments {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.assign-assign-attachments-list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	
+}
+
+.assign-assign-submit-button {
+	display: flex;
+	width: 400px;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+	background-color: $blue1;
+	color: white;
+	border-radius: 5px;
+	border: transparent;
+	box-shadow: 0px 0px 16px 1px $shadow;
+	font-size: 24px;
+}
+
+.assign-status-main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.assign-status-header {
+	margin-top: 20px;
+}
+
+
+.assign-table-tab {
+	
+	font-size: 18px;
+	
+
+}
+.assign-status-table {
+	padding: 10px;
+
+}
+
+.assign-status-table-col1 {
+	display: flex;
+	justify-content: center;
+	padding-right: 10px;
+	font-weight: bold;
+
+}
