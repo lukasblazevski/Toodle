@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "next dev",
+    "build-start": "npm run build && npm run start",
     "build": "next build",
     "start": "next start",
     "generate-data": "node ./scripts/generate-data.js"
