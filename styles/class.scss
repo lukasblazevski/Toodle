@@ -7,38 +7,38 @@ $shadow: rgba(0,0,0,0.2);
 $border-radius-num: 10px;
 
 //start class announcements css
-#class-ann-main-div {
+#course-ann-main-div {
 	display: flex;
 	flex-direction: column;
 	margin-top: 10px;
 	padding: 10px;
 }
 
-.class-ann-header {
+.course-ann-header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 10px;
 }
 
-.class-ann-container {
+.course-ann-container {
 	display: flex;
 	border-bottom: solid .5px $blue1;
 	box-shadow: 0px 0px 5px 0px $shadow;
 	padding: 10px;
 }
 
-.class-ann-title-auth-box {
+.course-ann-title-auth-box {
 	border-right: solid 1px;
 }
 
-.class-ann-title-prev-box {
+.course-ann-title-prev-box {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 }
 
-.class-ann-box-title {
+.course-ann-box-title {
 	display: flex;
 	margin-right: 10px;
 	width: 225px;
@@ -46,31 +46,29 @@ $border-radius-num: 10px;
 	align-items: center;
 }
 
-.class-ann-box-author {
+.course-ann-box-author {
 	display: flex;
 	color: $blue1
 }
 
-.class-ann-box-prev {
+.course-ann-box-prev {
 	margin-left: 20px;
 	padding: 5px;
 }
 
 //start class assignments css
-.class-assign-main-div{
-	display: flex;
-	border: solid;
+#course-assign-main-div{
+	width: 100%;
 }
 
-.class-assign-header{
+.course-assign-header{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 10px;
 }
 
-.class-assign-container {
-	width: 1250px;
+.course-assign-container {
 	display: flex;
 	flex-direction: row;
 	//justify-content: center;
@@ -79,75 +77,74 @@ $border-radius-num: 10px;
 	border-bottom: solid .5px $blue1;
 	box-shadow: 0px 0px 5px 0px $shadow;
 	padding: 10px;
+	width: 100%;
 }
 
-.class-assign-container-name{
+.course-assign-container-name{
 	margin: 10px;
+	flex-grow: 1;
 }
 
-.class-assign-container-name-link {
+.course-assign-container-name-link {
 	text-decoration: none;
 	color: $blue1
 }
 
-.class-assign-container-description{
-	padding-right: 400px;
+.course-assign-container-description {
+	flex-grow: 1;
 }
 
-.class-assign-container-due-static {
+.course-assign-container-due-static {
 	color: $blue1;
 	padding: 10px;
 }
 
-.class-assign-container-due-stack {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+.course-assign-container-due-stack {
+	text-align: center;
 }
 
-.class-assign-container-due {
+.course-assign-container-due {
 }
 
-.class-assign-container-remaining{
+.course-assign-container-remaining{
 }
 
 
 //start class people css
 
-.class-people-main-div {
+.course-people-main-div {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 
-#class-people-header {
+#course-people-header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
 }
 
-.class-people-container {
+.course-people-container {
 	display: flex;
 	flex-direction: row;
 	border: solid;
 	width: 1000px;
 }
 
-.class-people-container-namerole-div{
+.course-people-container-namerole-div{
 	display: flex;
 	flex-direction: column;
 	margin-left: 25px;
 	margin-top: 10px;
 }
 
-.class-people-container-name {
+.course-people-container-name {
 	display: flex;
 }
 
-.class-people-container-email{
+.course-people-container-email{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -156,14 +153,14 @@ $border-radius-num: 10px;
 	text-decoration: none;
 }
 
-.class-people-container-email a {
+.course-people-container-email a {
 	text-decoration: none;
 }
 
-.class-people-container-role {
+.course-people-container-role {
 	display: flex;
 }
 
-.class-people-container-lastactive {
+.course-people-container-lastactive {
 	display: flex;
 }

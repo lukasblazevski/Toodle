@@ -10,10 +10,10 @@ export default function Component() {
 		<div id='dash-main-div'>
 			<main id='dash-main'>
 				<h2 id='dash-course-name'>Courses</h2>
-				<div className='dash-class-list'>
+				<div className='dash-course-list'>
 					{courses.map(course => (
-						<div key={course.id} className='dash-class-container'>
-							<div className='dash-class-title'>
+						<div key={course.id} className='dash-course-container'>
+							<div className='dash-course-title'>
 								<h3>{course.id} - {course.name}</h3>
 							</div>
 							<Button href={`/course/${course.id}`}>
@@ -39,7 +39,7 @@ export default function Component() {
 									submission.student === user.email
 								))
 							)).sort((a, b) => (
-								+new Date(a.dueDate) - new Date(b.dueDate)
+								+new Date(a.dueDate) - +new Date(b.dueDate)
 							)).map(item => (
 								<UpcomingAssignment key={item.id} course={course} itemID={item.id} />
 							))}

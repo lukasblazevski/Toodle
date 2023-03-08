@@ -45,12 +45,12 @@ export default function CustomNav() {
 					<Nav className="me-auto">
 						<NavDropdown title="Current Courses" id="basic-nav-dropdown" disabled={courses.length === 0}>
 							{courses.map(course => (
-								<NavDropdown.Item key={course.id}>
+								<NavDropdown.Item href={`/course/${course.id}`} key={course.id}>
 									{course.id} - {course.name}
 								</NavDropdown.Item>
 							))}
 						</NavDropdown>
-						<Nav.Link href="#nysail">MySail</Nav.Link>
+						<Nav.Link href="#mysail">MySail</Nav.Link>
 						<Nav.Link href="#helpdesk">Get Help</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>

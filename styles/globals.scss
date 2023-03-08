@@ -12,6 +12,7 @@ $border-radius-num: 10px;
 :root {
 	background-color: $b-color;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	overflow-wrap: anywhere;
 }
 body {
 	background: none;
@@ -20,6 +21,7 @@ body {
 #nav-container {
 	margin-left: 20px;
 	margin-right: 20px;
+	max-width: none !important;
 }
 
 #profile-photo {
@@ -99,18 +101,23 @@ body {
 }
 
 //class page css start
-#class-top-div {
+#course-top-div {
 	background-color: $b-color;
 }
-#class-page-contents {
+#course-page-contents {
 	display: flex;
+	margin: 1%;
+
+	& > :not(:first-child) {
+		margin-left: 1%;
+	}
 }
 
-#class-title-top-div {
+#course-title-top-div {
 	padding-top: 1%;
 }
 
-#class-title-div {
+#course-title-div {
 	display: flex;
 	background-color: white;
 	padding: 1%;
@@ -118,112 +125,84 @@ body {
 	margin-left: 1%;
 	margin-right: 1%;
 	border-radius: $border-radius-num;
-	justify-content: space-between;
-	align-items: center ;
+	align-items: center;
 }
 
-#class-title-name {
+#course-title-name {
 	margin-left: 2%;
+	flex-grow: 1;
 }
 
-#class-title-div #class-location-link {
+#course-location-link {
 	display: flex;
 	justify-content: right;
 	margin-right: 1%;
 }
 
-#class-page-nav-container {
+#course-page-nav-container {
 	display: flex;
-	flex-basis: 10%;
 	background-color: white;
-	margin-top: 1%;
-	margin-left: 1%;
 	border-radius: $border-radius-num;
-	justify-content:center ;
+	justify-content: center;
 }
 
-#class-item-div {
-	display: flex;
-	width: 75%;
-	flex-flow: column;
+#course-item-div {
+	padding: 0 1em;
 }
 
-.class-sidebar-item{
+.course-sidebar-item{
 	display: flex;
 	margin-top: 2%;
-	height: 8%;
-	text-align:left;
+	text-align: left;
 	box-shadow: $shadow;
 	align-items: center;
 }
 
-.class-sidebar-item a{
+.course-sidebar-item a{
  	text-decoration: none;
 	color: black;
-	margin-top: 30%;
+	margin-top: 1em;
 }
 
-#class-center-box{
-	flex-basis: 75%;
+#course-center-box{
 	background-color: white;
-	margin-top: 1%;
-	margin-left: 1%;
 	border-radius: $border-radius-num;
 }
 
 
 
-#class-nav-right-container {
+#course-nav-right-container {
 	background-color: white;
 	display: flex;
-	margin-top: 1%;
-	flex-basis: 10%;
+	margin: 1%;
 	border-radius: $border-radius-num;
-	margin-left: 1%;
-	margin-right: 1%;
 }
 
 //start class components css (middle of page container)
-#class-center-container {
+#course-center-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-direction: column;
+	padding: 2em;
 }
 
-#class-home-main-div {
+#course-home-main-div {
 	display: flex;
-	margin-top: 3%;
 	justify-content: center;
 	flex-direction: column;
 }
 
-#class-home-title {
+#course-home-title {
 
 	display: flex;
 	justify-content: center;
 
 }
 
-#class-home-welcome {
-	padding-left: 5em;
-	padding-right: 5em;
-	padding-top: 1em;
+#course-home-welcome {
+	padding: 1em;
 }
-
-#class-home-importantlinks {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-top: 1em;
-
-}
-
-.class-home-importantlinks-links {
-	display: flex;
-	background-color: purple;
-}
-
-
 
 //dashboard css start
 #dash-main {
@@ -242,7 +221,7 @@ body {
 
 
 
-.dash-class-container {
+.dash-course-container {
 	border: solid .5px;
 	border-radius: $border-radius-num;
 	box-shadow: 0px 8px 16px 0px $shadow;
@@ -252,12 +231,12 @@ body {
 	text-align: center;
 }
 
-.dash-class-list {
+.dash-course-list {
 	justify-content: center;
 	display: flex;
     flex-wrap: wrap;
 }
-.class-container h3 {
+.course-container h3 {
 	justify-content: center;
 }
 
@@ -298,7 +277,7 @@ body {
 
 //start assignment component scss
 
-#asign-main-div {
+#assign-main-div {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -347,7 +326,7 @@ body {
 	padding: 20px;
 	display: flex;
 	justify-content: center;
-	
+
 
 }
 .assign-assign-attachments {
@@ -360,7 +339,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	
+
 }
 
 .assign-assign-submit-button {
@@ -388,13 +367,10 @@ body {
 	margin-top: 20px;
 }
 
-
 .assign-table-tab {
-	
 	font-size: 18px;
-	
-
 }
+
 .assign-status-table {
 	padding: 10px;
 
@@ -405,5 +381,4 @@ body {
 	justify-content: center;
 	padding-right: 10px;
 	font-weight: bold;
-
 }
