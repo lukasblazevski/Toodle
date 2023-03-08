@@ -18,16 +18,14 @@ export default function CourseContainer({ children }) {
 			</div>
 			<div id='course-page-contents'>
 				<div id="course-page-nav-container">
-					<div id="course-item-div">
-						<div className='course-sidebar-item'>
-							<a href={`/course/${course.id}`}>Content</a>
-						</div>
-						<div className='course-sidebar-item'>
-							<a href={`/course/${course.id}/announcements`}>Announcements</a>
-						</div>
-						<div className='course-sidebar-item'>
-							<a href={`/course/${course.id}/members`}>Members</a>
-						</div>
+					<div className='course-sidebar-item'>
+						<a href={`/course/${course.id}`}>Home</a>
+					</div>
+					<div className='course-sidebar-item'>
+						<a href={`/course/${course.id}/announcements`}>Announcements</a>
+					</div>
+					<div className='course-sidebar-item'>
+						<a href={`/course/${course.id}/members`}>Members</a>
 					</div>
 				</div>
 

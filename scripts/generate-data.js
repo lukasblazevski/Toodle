@@ -75,14 +75,14 @@ async function generateCourses() {
 		items: [
 			{
 				type: 'embed',
-				date: new Date('January 8, 2023'),
+				date: new Date('2023-01-08'),
 				name: 'Syllabus',
 				attachment: 'CSI-3500-Syllabus.pdf'
 			},
 			{
 				type: 'assignment',
-				date: new Date('January 15, 2023'),
-				dueDate: new Date('January 31, 2023'),
+				date: new Date('2023-03-6'),
+				dueDate: new Date('2023-03-10T12:00'),
 				name: 'Individual assignment: Persona Readings',
 				points: 10,
 				description: 'Like any reading assignment, submit three copy/pasted sentences per reading in the numbered list below.\n\n1. About Face, 4th edition - chapter 3 (teaches you what a persona is, why they are important to a user-centered design process, and how to make one)',
@@ -98,8 +98,8 @@ async function generateCourses() {
 			},
 			{
 				type: 'assignment',
-				date: new Date('February 21, 2023'),
-				dueDate: new Date('April 13, 2023'),
+				date: new Date('2023-03-07'),
+				dueDate: new Date('2023-03-12T23:59'),
 				name: 'Group assignment: Key Path Scenario',
 				points: 100,
 				description: 'Select one of the three persona+problem scenario pairs that you claimed last week. You will design a key path scenario for this persona and their problem.',

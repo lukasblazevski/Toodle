@@ -6,13 +6,27 @@ $b-color: #9AC6C5;
 $grey: #7c7c7c;
 $light-grey: #e4e4e4;
 $shadow: rgba(0,0,0,0.2);
-
 $border-radius-num: 10px;
+
+$desktop-width: 900px;
+
+// Only applies styles when the viewport is large.
+@mixin desktop {
+	@media screen and (min-width: $desktop-width) {
+		@content;
+	}
+}
+
+// Only applies styles when the viewport is not large.
+@mixin mobile {
+	@media not screen and (min-width: $desktop-width) {
+		@content;
+	}
+}
 
 :root {
 	background-color: $b-color;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	overflow-wrap: anywhere;
 }
 body {
 	background: none;
@@ -109,7 +123,17 @@ body {
 	margin: 1%;
 
 	& > :not(:first-child) {
-		margin-left: 1%;
+		@include mobile {
+			margin-top: 1%;
+		}
+
+		@include desktop {
+			margin-left: 1%;
+		}
+	}
+
+	@include mobile {
+		flex-direction: column;
 	}
 }
 
@@ -143,25 +167,30 @@ body {
 	display: flex;
 	background-color: white;
 	border-radius: $border-radius-num;
-	justify-content: center;
-}
+	justify-content: flex-start;
+	padding: 0.5em;
 
-#course-item-div {
-	padding: 0 1em;
+	@include desktop {
+		flex-direction: column;
+	}
 }
 
 .course-sidebar-item{
 	display: flex;
-	margin-top: 2%;
+	padding: 0.5em 0.5em;
 	text-align: left;
-	box-shadow: $shadow;
 	align-items: center;
+
+	@include mobile {
+		&:not(:first-child) {
+			margin-left: 0;
+		}
+	}
 }
 
 .course-sidebar-item a{
  	text-decoration: none;
 	color: black;
-	margin-top: 1em;
 }
 
 #course-center-box{
@@ -381,4 +410,168 @@ body {
 	justify-content: center;
 	padding-right: 10px;
 	font-weight: bold;
+}
+
+//start class announcements css
+#course-ann-main-div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+.course-ann-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.course-ann-container {
+	display: flex;
+	border-bottom: solid .5px $blue1;
+	box-shadow: 0px 0px 5px 0px $shadow;
+	padding: 10px;
+}
+
+.course-ann-title-auth-box {
+	border-right: solid 1px;
+}
+
+.course-ann-title-prev-box {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.course-ann-box-title {
+	display: flex;
+	margin-right: 10px;
+	width: 225px;
+	justify-content: baseline;
+	align-items: center;
+}
+
+.course-ann-box-author {
+	display: flex;
+	color: $blue1
+}
+
+.course-ann-box-prev {
+	margin-left: 20px;
+	padding: 5px;
+}
+
+//start class assignments css
+#course-assign-main-div{
+	width: 100%;
+}
+
+.course-assign-header{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+}
+
+.course-assign-container {
+	display: flex;
+	flex-direction: row;
+	//justify-content: center;
+	align-items: center;
+	//padding: 10px;
+	border-bottom: solid .5px $blue1;
+	box-shadow: 0px 0px 5px 0px $shadow;
+	padding: 10px;
+	width: 100%;
+}
+
+.course-assign-container-name{
+	margin: 10px;
+	flex-grow: 1;
+}
+
+.course-assign-container-name-link {
+	text-decoration: none;
+	color: $blue1
+}
+
+.course-assign-container-description {
+	flex-grow: 1;
+}
+
+.course-assign-container-due-static {
+	color: $blue1;
+	padding: 10px;
+}
+
+.course-assign-container-due-stack {
+	text-align: center;
+}
+
+.course-assign-container-due {
+}
+
+.course-assign-container-remaining {
+}
+
+
+//start class people css
+
+.course-people-main-div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#course-people-header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+.course-people-container {
+	display: flex;
+	flex-direction: row;
+	border: solid;
+	width: 1000px;
+}
+
+.course-people-container-namerole-div{
+	display: flex;
+	flex-direction: column;
+	margin-left: 25px;
+	margin-top: 10px;
+}
+
+.course-people-container-name {
+	display: flex;
+}
+
+.course-people-container-email{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 25px;
+	color: $blue1;
+	text-decoration: none;
+}
+
+.course-people-container-email a {
+	text-decoration: none;
+}
+
+.course-people-container-role {
+	display: flex;
+}
+
+.course-people-container-lastactive {
+	display: flex;
+}
+
+.calendar {
+	display: flex;
+	align-items: center;
 }

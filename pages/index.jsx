@@ -2,6 +2,7 @@ import { Fragment, useContext } from 'react';
 import DataContext from 'lib/DataContext';
 import { Button } from 'react-bootstrap';
 import UpcomingAssignment from 'components/UpcomingAssignment';
+import CalendarContainer from 'components/CalendarContainer';
 
 export default function Component() {
 	const { user, courses } = useContext(DataContext);
@@ -47,6 +48,9 @@ export default function Component() {
 					))}
 				</div>
 			</footer>
+			<div className='calendar'>
+				<CalendarContainer />
+			</div>
 		</div>
 	);
 }

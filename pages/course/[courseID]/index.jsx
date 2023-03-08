@@ -27,8 +27,10 @@ export default function Component() {
 					id: i
 				})).filter(item => (
 					item.type === 'assignment'
+				)).sort((a, b) => (
+					+new Date(a.date) - new Date(b.date)
 				)).map(item => (
-					<CourseAssignmentListing item={item} />
+					<CourseAssignmentListing key={item.id} item={item} />
 				))}
 			</div>
 		</CourseContainer>

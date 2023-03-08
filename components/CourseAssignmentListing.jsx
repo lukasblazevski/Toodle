@@ -1,8 +1,14 @@
 import RelativeDate from 'components/RelativeDate';
+import DataContext from 'lib/DataContext';
 import useCourse from 'lib/useCourse';
+import { useContext } from 'react';
+import AbsoluteDate from './AbsoluteDate';
 
 export default function CourseAssignmentListing({ item }) {
+	const { user } = useContext(DataContext);
 	const course = useCourse();
+
+	const submitted = item.submissions.some(submission => submission.student === user.email);
 
 	return (
 		<div className='course-assign-container'>
@@ -14,19 +20,18 @@ export default function CourseAssignmentListing({ item }) {
 				</h4>
 			</div>
 
-			<div className='course-assign-container-due-static'>
-				<h8></h8>
-			</div>
-
-			{/*text change to submitted when submitted*/}
-			<div className='course-assign-container-due-stack'>
-				<div className='course-assign-container-due'>
-					<h8>Due: Feb 8 at 11:59pm</h8>
+			{submitted ? (
+				<div className='course-assign-container-due-stack'>Submitted</div>
+			) : (
+				<div className='course-assign-container-due-stack'>
+					<div className='course-assign-container-due'>
+						Due: <AbsoluteDate value={item.dueDate} />
+					</div>
+					<div className='course-assign-container-remaining'>
+						(<RelativeDate value={item.dueDate} />)
+					</div>
 				</div>
-				<div className='course-assign-container-remaining'>
-					<h8><RelativeDate value={2} /></h8>
-				</div>
-			</div>
+			)}
 		</div>
 	);
 }

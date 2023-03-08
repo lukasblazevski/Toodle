@@ -2,7 +2,6 @@ import Head from 'next/head';
 import App from 'next/app'; // @server-only
 import { getUserFromCookies } from '../lib/cookies'; // @server-only
 import '../styles/globals.scss';
-import '../styles/class.scss';
 import db from 'lib/db'; // @server-only
 import DataContext from 'lib/DataContext';
 import CustomNav from 'components/CustomNav';
