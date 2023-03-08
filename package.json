@@ -4,9 +4,9 @@
   "scripts": {
     "dev": "next dev",
     "build-start": "npm run build && npm run start",
-    "build": "next build",
     "start": "next start",
-    "generate-data": "node ./scripts/generate-data.js"
+    "generate-data": "node ./scripts/generate-data.js",
+    "build": "next build"
   },
   "dependencies": {
     "@fullcalendar/core": "^6.1.4",
