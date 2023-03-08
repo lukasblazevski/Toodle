@@ -196,6 +196,7 @@ body {
 #course-center-box{
 	background-color: white;
 	border-radius: $border-radius-num;
+	flex-grow: 1;
 }
 
 
@@ -355,8 +356,7 @@ body {
 	padding: 20px;
 	display: flex;
 	justify-content: center;
-
-
+	white-space: pre-wrap;
 }
 .assign-assign-attachments {
 	display: flex;
@@ -382,7 +382,10 @@ body {
 	border-radius: 5px;
 	border: transparent;
 	box-shadow: 0px 0px 16px 1px $shadow;
-	font-size: 24px;
+
+	&.big {
+		font-size: 1.5em;
+	}
 }
 
 .assign-status-main {
@@ -573,5 +576,6 @@ body {
 
 .calendar {
 	display: flex;
-	align-items: center;
+	justify-content: center;
+	padding: 1em;
 }

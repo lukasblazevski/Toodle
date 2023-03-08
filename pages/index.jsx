@@ -48,7 +48,7 @@ export default function Component() {
 					))}
 				</div>
 			</footer>
-			{/* <CalendarContainer /> */}
+			<CalendarContainer />
 		</div>
 	);
 }

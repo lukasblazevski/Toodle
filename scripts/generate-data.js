@@ -81,7 +81,7 @@ async function generateCourses() {
 			},
 			{
 				type: 'assignment',
-				date: new Date('2023-03-6'),
+				date: new Date('2023-03-06'),
 				dueDate: new Date('2023-03-10T12:00'),
 				name: 'Individual assignment: Persona Readings',
 				points: 10,

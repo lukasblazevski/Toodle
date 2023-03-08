@@ -1,8 +1,7 @@
-import RelativeDate from 'components/RelativeDate';
+import Timestamp from 'components/Timestamp';
 import DataContext from 'lib/DataContext';
 import useCourse from 'lib/useCourse';
 import { useContext } from 'react';
-import AbsoluteDate from './AbsoluteDate';
 
 export default function CourseAssignmentListing({ item }) {
 	const { user } = useContext(DataContext);
@@ -25,10 +24,10 @@ export default function CourseAssignmentListing({ item }) {
 			) : (
 				<div className='course-assign-container-due-stack'>
 					<div className='course-assign-container-due'>
-						Due: <AbsoluteDate value={item.dueDate} />
+						Due: <Timestamp short value={item.dueDate} />
 					</div>
 					<div className='course-assign-container-remaining'>
-						(<RelativeDate value={item.dueDate} />)
+						(<Timestamp relative value={item.dueDate} />)
 					</div>
 				</div>
 			)}

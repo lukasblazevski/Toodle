@@ -33,7 +33,7 @@ MyApp.getInitialProps = async function (appContext) {
 	const appProps = await App.getInitialProps(appContext);
 
 	appProps.pageProps.initialProps = {
-		classes: []
+		courses: []
 	};
 
 	const { req, res } = appContext.ctx;
@@ -48,12 +48,21 @@ MyApp.getInitialProps = async function (appContext) {
 		appProps.pageProps.initialProps.user = user;
 
 		const courses = db.collection('courses');
-
 		appProps.pageProps.initialProps.courses = await courses.find({
 			$or: [
 				{ 'students.email': user.email },
 				{ professor: user.email }
 			]
+		}).toArray();
+
+		const users = db.collection('users');
+		appProps.pageProps.initialProps.users = await users.find({
+			email: {
+				$in: appProps.pageProps.initialProps.courses.flatMap(course => [
+					course.professor,
+					...course.students.map(student => student.email)
+				])
+			}
 		}).toArray();
 	}
 

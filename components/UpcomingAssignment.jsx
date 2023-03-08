@@ -1,4 +1,4 @@
-import RelativeDate from './RelativeDate';
+import Timestamp from './Timestamp';
 
 export default function UpcomingAssignment({ course, itemID }) {
 	const item = course.items[itemID];
@@ -12,7 +12,7 @@ export default function UpcomingAssignment({ course, itemID }) {
 			<a href={`/course/${course.id}/item/${itemID}`}>
 				{item.name}
 			</a><br />
-			Due: <RelativeDate value={item.dueDate} />
+			Due: <Timestamp relative value={item.dueDate} />
 		</div>
 	);
 }
