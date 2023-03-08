@@ -29,7 +29,7 @@ async function generateUsers() {
 	} catch {}
 
 	await users.insertOne({
-		type: 'professor',
+		type: 'student',
 		email: 'grantgryczan@oakland.edu',
 		firstName: 'Grant',
 		lastName: 'Gryczan',
@@ -37,7 +37,7 @@ async function generateUsers() {
 	});
 
 	await users.insertOne({
-		type: 'student',
+		type: 'professor',
 		email: 'jordancostlow@oakland.edu',
 		firstName: 'Jordan',
 		lastName: 'Costlow',
@@ -69,7 +69,7 @@ async function generateCourses() {
 	await courses.insertOne({
 		id: 'CSI-3500',
 		name: 'Human Computer Interaction',
-		professor: 'grantgryczan@oakland.edu',
+		professor: 'jordancostlow@oakland.edu',
 		location: 'Online',
 		description: 'This course surveys various components and techniques of Human Computer Interactions (HCI). Topics include the basic perceptual, cognitive, performance capabilities of people and external factors that affect these capabilities. Various tools and techniques for understanding and evaluating the interactions of people with technology are discussed. Systematic process for designing, prototyping, evaluating and revising interactive systems are studied.',
 		items: [
@@ -90,7 +90,7 @@ async function generateCourses() {
 				submissions: [
 					{
 						date: new Date('January 22, 2023 3:24 PM'),
-						student: 'jordancostlow@oakland.edu',
+						student: 'grantgryczan@oakland.edu',
 						attachment: 'Individual Assignment 2.pdf',
 						points: 8
 					}
@@ -108,7 +108,7 @@ async function generateCourses() {
 			}
 		],
 		students: [
-			{ email: 'jordancostlow@oakland.edu' },
+			{ email: 'grantgryczan@oakland.edu' },
 			{ email: 'lblazevski@oakland.edu' }
 		]
 	});
