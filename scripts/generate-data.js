@@ -91,7 +91,7 @@ async function generateCourses() {
 					{
 						date: new Date('January 22, 2023 3:24 PM'),
 						student: 'grantgryczan@oakland.edu',
-						attachment: 'Individual Assignment 2.pdf',
+						attachment: 'Individual Assignment 2.docx',
 						points: 8
 					}
 				]
