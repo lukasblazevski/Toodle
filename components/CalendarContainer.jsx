@@ -6,6 +6,8 @@ export default function CalendarContainer() {
 	const [selectedDate, setSelectedDate] = useState(new Date());
 
 	return (
-		<Calendar value={selectedDate} onChange={setSelectedDate} />
+		<div className='calendar'>
+			<Calendar value={selectedDate} onChange={setSelectedDate} />
+		</div>
 	);
 }

@@ -4,5 +4,8 @@ const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', "Sep", '
 export default function AbsoluteDate({ value }) {
 	const date = new Date(value);
 
-	return <>{weekDays[date.getDay()]}, {months[date.getMonth()]} {date.getDate()}</>;
+	const hour = date.getHours();
+	const amOrPM = hour < 12 ? 'am' : 'pm';
+
+	return <>{weekDays[date.getDay()]}, {months[date.getMonth()]} {date.getDate()} at {(hour % 12) || 12}:{`0${date.getMinutes()}`.slice(-2)}{amOrPM}</>;
 }

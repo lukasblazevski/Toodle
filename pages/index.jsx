@@ -48,9 +48,7 @@ export default function Component() {
 					))}
 				</div>
 			</footer>
-			<div className='calendar'>
-				<CalendarContainer />
-			</div>
+			{/* <CalendarContainer /> */}
 		</div>
 	);
 }
