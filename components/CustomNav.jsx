@@ -64,11 +64,11 @@ export default function CustomNav() {
 								<NavDropdown.Item href="#preferences">Preferences</NavDropdown.Item>
 								<NavDropdown.Item
 									onClick={async () => {
-										await api.delete('/session');
-
 										if (!confirm('Are you sure you want to sign out?')) {
 											return;
 										}
+
+										await api.delete('/session');
 
 										location.reload();
 									}}
