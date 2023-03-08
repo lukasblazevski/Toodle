@@ -34,8 +34,8 @@ export default function Timestamp({ value, relative, short }) {
 	}
 
 	if (daysFromNow === 0) {
-		return <>in {hoursFromNow}h{minsFromNow && `${minsFromNow}m`}</>;
+		return <>in {hoursFromNow}h{minsFromNow !== 0 && `${minsFromNow}m`}</>;
 	}
 
-	return <>in {daysFromNow}d{hoursFromNow && `${hoursFromNow}h`}</>;
+	return <>in {daysFromNow}d{hoursFromNow !== 0 && `${hoursFromNow}h`}</>;
 }
