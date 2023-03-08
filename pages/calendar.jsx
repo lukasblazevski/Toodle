@@ -1,16 +1,17 @@
-import { useState, useContext } from 'react';
-import Calendar from 'react-calendar'; 
-import 'react-calendar/dist/Calendar.css'; 
-
-
+import UpcomingAssignment from 'components/UpcomingAssignment';
+import DataContext from 'lib/DataContext';
+import { useState, useContext, Fragment } from 'react';
+import { Button } from 'react-bootstrap';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 export default function Component() {
 	const { user, courses } = useContext(DataContext);
-  const [selectedDate, setSelectedDate] = useState(new Date()); 
+	const [selectedDate, setSelectedDate] = useState(new Date());
 
 	return (
 		<div id='dash-main-div'>
-      <Calendar value={selectedDate} onChange={setSelectedDate} /> {/* add this line */}
+			<Calendar value={selectedDate} onChange={setSelectedDate} /> {/* add this line */}
 			<main id='dash-main'>
 				<h2 id='dash-course-name'>Courses</h2>
 				<div className='dash-class-list'>
