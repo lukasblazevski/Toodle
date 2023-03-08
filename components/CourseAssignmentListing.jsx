@@ -10,7 +10,7 @@ export default function CourseAssignmentListing({ item }) {
 	const submitted = item.submissions.some(submission => submission.student === user.email);
 
 	return (
-		<div className='course-assign-container'>
+		<div className={`course-assign-container${submitted ? ' submitted' : ''}`}>
 			<div className='course-assign-container-name'>
 				<h4>
 					<a className='course-assign-container-name-link' href={`/course/${course.id}/item/${item.id}`}>
