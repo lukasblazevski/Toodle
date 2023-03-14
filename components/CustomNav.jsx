@@ -61,7 +61,7 @@ export default function CustomNav() {
 					<div id="profile-photo-nav">
 						<Nav className="ms-auto">
 							<NavDropdown id="basic-nav-dropdown" title={<img id="profile-photo" src="/default_user_profile.svg" alt="user pic"/>}>
-								<NavDropdown.Item href="#preferences">Preferences</NavDropdown.Item>
+								<NavDropdown.Item href="/preferences">Preferences</NavDropdown.Item>
 								<NavDropdown.Item
 									onClick={async () => {
 										if (!confirm('Are you sure you want to sign out?')) {
@@ -91,3 +91,6 @@ export default function CustomNav() {
 		</Navbar>
 	);
 }
+
+
+
