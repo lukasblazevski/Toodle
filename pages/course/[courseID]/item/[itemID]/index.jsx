@@ -65,7 +65,11 @@ export default function Component() {
 						description: item.description
 					}}
 					onSubmit={async values => {
-						await api.patch(`/courses/${course.id}/items/${itemID}`, values);
+						await api.patch(`/courses/${course.id}/items/${itemID}`, {
+							name: values.name,
+							dueDate: new Date(`${values.dueDate}T${values.dueTime}`).toISOString(),
+							description: values.description
+						});
 
 						location.reload();
 					}}
