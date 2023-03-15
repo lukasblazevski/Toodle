@@ -20,7 +20,11 @@ export default function CourseMember({ email }) {
 				</div>
 			</div>
 			<div className='course-people-container-email'>
-				<h5><a href={`mailto:${email}`}>{email}</a></h5>
+				<h5>
+					<a href={`mailto:${email}`} target="_blank">
+						{email}
+					</a>
+				</h5>
 			</div>
 
 			{/* Maybe have this? Not in use cases but can be useful to take up space
