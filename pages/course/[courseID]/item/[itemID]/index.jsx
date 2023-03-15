@@ -1,10 +1,11 @@
 import CourseContainer from 'components/CourseContainer';
 import Timestamp from 'components/Timestamp';
+import { Field, Formik } from 'formik';
 import api from 'lib/api';
 import DataContext from 'lib/DataContext';
 import useCourse from 'lib/useCourse';
 import { useRouter } from 'next/router';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 
 export default function Component() {
 	const { user } = useContext(DataContext);
@@ -47,14 +48,134 @@ export default function Component() {
 		location.reload();
 	};
 
+	const [editing, setEditing] = useState(false);
+
+	const isProfessor = user.email === course.professor;
+
+	if (editing) {
+		const initialDueDate = new Date(item.dueDate);
+
+		return (
+			<CourseContainer>
+				<Formik
+					initialValues={{
+						name: item.name,
+						dueDate: initialDueDate.toLocaleDateString('sv'),
+						dueTime: initialDueDate.toLocaleTimeString('sv'),
+						description: item.description
+					}}
+					onSubmit={async values => {
+						await api.put(`/courses/${course.id}/items/${itemID}`, values);
+
+						location.reload();
+					}}
+				>
+					<div className='prof-assign-main-div'>
+						<div className='prof-assign-title-chng-div'>
+							<label htmlFor='prof-assign-title-chng' className="prof-assign-title-chng-lable prof-assign-label">Title:</label>
+							<Field type="text" id="prof-assign-title-chng" name="name" placeholder="Enter New Title" size={50} required />
+						</div>
+
+						<div className="prof-assign-dates-div">
+							<div className="prof-assign-duedate-chng-div">
+								<label htmlFor="prof-assign-duedate-chng" className="prof-assign-duedate-chng-label prof-assign-label">Due Date:</label>
+								<Field type="date" id="prof-assign-duedate-chng" name="dueDate" required />
+								<Field type="time" id="prof-assign-duetime-chng" name="dueTime" required />
+							</div>
+						</div>
+
+						<div className="prof-assign-desc-chng-div">
+							<label htmlFor="prof-assign-desc-chng" className="prof-assign-desc-chng-lable prof-assign-label">Change Description</label>
+							<Field as="textarea" name="description" type="text" id="prof-assign-desc-chng" />
+						</div>
+
+						<button type="submit" className='prof-assign-button'>
+							Save
+						</button>
+						<button
+							type="button"
+							className='prof-assign-button'
+							onClick={() => {
+								setEditing(false);
+							}}
+						>
+							Cancel
+						</button>
+					</div>
+				</Formik>
+			</CourseContainer>
+		);
+	}
+
+	const professorStuff = isProfessor && (
+		<div className='prof-assign-edit-div'>
+			<button
+				type="button"
+				className='prof-assign-edit-button'
+				onClick={() => {
+					setEditing(true);
+				}}
+			>
+				Edit Assignment Details
+			</button>
+		</div>
+	);
+
+	const studentStuff = !isProfessor && (
+		<>
+			{submission ? (
+				<div>
+					<button className='assign-assign-submit-button' onClick={removeSubmission}>
+						Remove Submission
+					</button>
+				</div>
+			) : (
+				<div>
+					<button className='assign-assign-submit-button big' onClick={addSubmission}>
+						Add Submission
+					</button>
+				</div>
+			)}
+
+			<div className='assign-status-main'>
+				<h4 className='assign-status-header'>Status</h4>
+
+				<div className='assign-status-table'>
+					<table className='assign-table-tab'>
+						<tbody>
+							{submission && (
+								<tr>
+									<td className='assign-status-table-col1'>Submission:</td>
+									<td>
+										<a href={`/api/attachments/${encodeURIComponent(submission.attachment)}`} target="_blank">
+											{submission.attachment}
+										</a>
+									</td>
+								</tr>
+							)}
+							<tr>
+								<td className='assign-status-table-col1'>Status:</td>
+								<td>
+									{submission ? (
+										'Submitted (not graded)'
+									) : (
+										'Not Submitted'
+									)}
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</>
+	);
+
 	return (
 		<CourseContainer>
 			<div id="assign-main-div">
 				<div className='assign-header'>
 					<h1 className='assign-header'>{item.name}</h1>
 				</div>
-
-
 
 				<div className='assign-table-div'>
 					<table className='assign-due-dates'>
@@ -94,56 +215,8 @@ export default function Component() {
 					)}
 				</div>
 
-				{submission ? (
-					<div>
-						<button className='assign-assign-submit-button' onClick={removeSubmission}>
-							Remove Submission
-						</button>
-					</div>
-				) : (
-					<div>
-						<button className='assign-assign-submit-button big' onClick={addSubmission}>
-							Add Submission
-						</button>
-					</div>
-				)}
-
-				<div className='prof-assign-edit-div'>
-					<button className='prof-assign-edit-button' /* onClick={addSubmission} */ >
-								Edit Assignment Details
-					</button>
-				</div>
-
-				<div className='assign-status-main'>
-					<h4 className='assign-status-header'>Status</h4>
-
-					<div className='assign-status-table'>
-						<table className='assign-table-tab'>
-							<tbody>
-								{submission && (
-									<tr>
-										<td className='assign-status-table-col1'>Submission:</td>
-										<td>
-											<a href={`/api/attachments/${encodeURIComponent(submission.attachment)}`} target="_blank">
-												{submission.attachment}
-											</a>
-										</td>
-									</tr>
-								)}
-								<tr>
-									<td className='assign-status-table-col1'>Status:</td>
-									<td>
-										{submission ? (
-											'Submitted (not graded)'
-										) : (
-											'Not Submitted'
-										)}
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div>
+				{professorStuff}
+				{studentStuff}
 			</div>
 		</CourseContainer>
 	);
