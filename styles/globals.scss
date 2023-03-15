@@ -583,3 +583,29 @@ body {
 	justify-content: center;
 	padding: 1em;
 }
+
+
+//start professor edit assingment page
+
+.prof-assign-edit-button {
+	display: flex;
+	width: 400px;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+
+	background-color: $rorange;
+	color: white;
+
+	border-color: transparent;
+	border-radius: 5px;
+
+	font-size: x-large;
+	font-weight: bolder;
+	margin: 15px;
+}
+
+.prof-assign-edit-div {
+	display: flex;
+	
+}

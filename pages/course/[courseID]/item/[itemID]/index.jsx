@@ -54,6 +54,8 @@ export default function Component() {
 					<h1 className='assign-header'>{item.name}</h1>
 				</div>
 
+
+
 				<div className='assign-table-div'>
 					<table className='assign-due-dates'>
 						<tbody>
@@ -105,6 +107,12 @@ export default function Component() {
 						</button>
 					</div>
 				)}
+
+				<div className='prof-assign-edit-div'>
+					<button className='prof-assign-edit-button' /* onClick={addSubmission} */ >
+								Edit Assignment Details
+					</button>
+				</div>
 
 				<div className='assign-status-main'>
 					<h4 className='assign-status-header'>Status</h4>
