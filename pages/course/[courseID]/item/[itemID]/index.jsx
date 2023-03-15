@@ -94,6 +94,9 @@ export default function Component() {
 						</div>
 
 						<div className='prof-assign-sc-button-div'>
+							<button type="submit" className='prof-assign-save-button'>
+								Save
+							</button>
 							<button
 								type="button"
 								className='prof-assign-cancel-button'
@@ -103,10 +106,6 @@ export default function Component() {
 							>
 								Cancel
 							</button>
-							<button type="submit" className='prof-assign-save-button'>
-								Save
-							</button>
-						
 						</div>
 					</Form>
 				</Formik>
