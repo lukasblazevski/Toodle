@@ -6,7 +6,7 @@ $b-color: #9AC6C5;
 $grey: #7c7c7c;
 $light-grey: #e4e4e4;
 $shadow: rgba(0,0,0,0.2);
-$border-radius-num: 10px;
+$border-radius-num: 5px;
 
 $desktop-width: 900px;
 
@@ -691,4 +691,27 @@ body {
 
 .prof-assign-edit-div {
 	display: flex;
+}
+
+.prof-assign-sc-button-div {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+.prof-assign-save-button {
+	width: 200px;
+	height: 50px;
+	color: white;
+	background-color: $blue1;
+	border-radius: $border-radius-num;
+	margin-left: 10px;
+}
+
+.prof-assign-cancel-button {
+	width: 200px;
+	height: 50px;
+	background-color: #FE4A49;
+	color: white;
+	border-radius: $border-radius-num;
 }

@@ -89,18 +89,20 @@ export default function Component() {
 							<Field as="textarea" name="description" type="text" id="prof-assign-desc-chng" />
 						</div>
 
-						<button type="submit" className='prof-assign-button'>
-							Save
-						</button>
-						<button
-							type="button"
-							className='prof-assign-button'
-							onClick={() => {
-								setEditing(false);
-							}}
-						>
-							Cancel
-						</button>
+						<div className='prof-assign-sc-button-div'>
+							<button
+								type="button"
+								className='prof-assign-cancel-button'
+								onClick={() => {
+									setEditing(false);
+								}}
+							>
+								Cancel
+							</button>
+							<button type="submit" className='prof-assign-save-button'>
+								Save
+							</button>
+					</div>
 					</div>
 				</Formik>
 			</CourseContainer>
