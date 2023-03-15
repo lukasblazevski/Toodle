@@ -3,7 +3,7 @@ import { getUserFromCookies } from 'lib/cookies';
 
 export default async function handler(req, res) {
 	if (req.method !== 'PATCH') {
-		res.status(405);
+		res.status(405).end();
 		return;
 	}
 
@@ -17,7 +17,7 @@ export default async function handler(req, res) {
 		return;
 	}
 
-	const user = getUserFromCookies(req, res);
+	const user = await getUserFromCookies(req, res);
 
 	if (user.email !== course.professor) {
 		res.status(403).send('To manage a course, you must be signed in as its professor.');

@@ -1,6 +1,6 @@
 import CourseContainer from 'components/CourseContainer';
 import Timestamp from 'components/Timestamp';
-import { Field, Formik } from 'formik';
+import { Field, Form, Formik } from 'formik';
 import api from 'lib/api';
 import DataContext from 'lib/DataContext';
 import useCourse from 'lib/useCourse';
@@ -65,12 +65,12 @@ export default function Component() {
 						description: item.description
 					}}
 					onSubmit={async values => {
-						await api.put(`/courses/${course.id}/items/${itemID}`, values);
+						await api.patch(`/courses/${course.id}/items/${itemID}`, values);
 
 						location.reload();
 					}}
 				>
-					<div className='prof-assign-main-div'>
+					<Form className='prof-assign-main-div'>
 						<div className='prof-assign-title-chng-div'>
 							<label htmlFor='prof-assign-title-chng' className="prof-assign-title-chng-lable prof-assign-label">Title:</label>
 							<Field type="text" id="prof-assign-title-chng" name="name" placeholder="Enter New Title" size={50} required />
@@ -101,7 +101,7 @@ export default function Component() {
 						>
 							Cancel
 						</button>
-					</div>
+					</Form>
 				</Formik>
 			</CourseContainer>
 		);
